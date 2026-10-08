@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="300" viewBox="0 0 1000 300" role="img" aria-labelledby="heroTitle heroDesc">
+  <title id="heroTitle">Kamalnath U — full-stack developer</title>
+  <desc id="heroDesc">A dark blueprint-style banner. On the left, the name Kamalnath U with the line: React interfaces, Python services, models that earn their keep. On the right, a browser window holding a bar chart and trend line, connected to an animated pipeline of three stage blocks.</desc>
+
+  <defs>
+    <linearGradient id="heroGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity=".20"/>
+      <stop offset=".55" stop-color="#a78bfa" stop-opacity=".06"/>
+      <stop offset="1" stop-color="#0b1220" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="heroGrid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0v28" fill="none" stroke="#16243a" stroke-width="1"/>
+    </pattern>
+    <style>
+      text { font-family: 'Segoe UI', Inter, -apple-system, 'Trebuchet MS', Arial, sans-serif; }
+      .mono { font-family: 'Cascadia Code', Consolas, ui-monospace, 'Courier New', monospace; }
+      .flow { fill: none; stroke: #34d399; stroke-width: 2; stroke-dasharray: 5 9; animation: dash 2.4s linear infinite; }
+      .tr { transform-box: view-box; animation: tr 2.4s linear infinite; }
+      .tr2 { animation-delay: -1.2s; }
+      .bob { transform-box: fill-box; transform-origin: center; animation: bob 5s ease-in-out infinite; }
+      .blink { animation: blink 1.6s steps(1, end) infinite; }
+      @keyframes dash { to { stroke-dashoffset: -56; } }
+      @keyframes tr { from { transform: translateX(0); } to { transform: translateX(244px); } }
+      @keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+      @keyframes blink { 0%, 60% { opacity: 1; } 61%, 100% { opacity: .15; } }
+      @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+    </style>
+  </defs>
+
+  <rect width="1000" height="300" rx="26" fill="#0b1220"/>
+  <rect width="1000" height="300" rx="26" fill="url(#heroGrid)" opacity=".85"/>
+  <rect x="1" y="1" width="998" height="298" rx="25" fill="none" stroke="#1e2d45" stroke-width="1.5"/>
+  <rect x="1" y="1" width="998" height="298" rx="25" fill="url(#heroGlow)"/>
+
+  <!-- left: identity -->
+  <text x="56" y="76" class="mono" font-size="12" letter-spacing="4" fill="#22d3ee">HELLO, I'M</text>
+  <text x="56" y="126" font-size="46" font-weight="700" fill="#e6edf6">Kamalnath U</text>
+  <path d="M56 152h104" stroke="#34d399" stroke-width="3" stroke-linecap="round"/>
+  <text x="56" y="188" font-size="15" fill="#8ba3c0">Full-stack developer — React interfaces, Python services,</text>
+  <text x="56" y="210" font-size="15" fill="#8ba3c0">and models that earn their keep.</text>
+
+  <rect x="56" y="230" width="150" height="30" rx="15" fill="#34d399" fill-opacity=".10" stroke="#34d399"/>
+  <text x="131" y="250" class="mono" font-size="11" letter-spacing="1" text-anchor="middle" fill="#34d399">OPEN TO WORK</text>
+  <rect x="220" y="230" width="182" height="30" rx="15" fill="#a78bfa" fill-opacity=".10" stroke="#a78bfa"/>
+  <text x="311" y="250" class="mono" font-size="11" letter-spacing="1" text-anchor="middle" fill="#a78bfa">BUILDING IN PUBLIC</text>
+
+  <path d="M520 52v196" stroke="#1e2d45" stroke-width="1.5" stroke-dasharray="3 8"/>
+
+  <!-- right: interface + pipeline illustration -->
+  <g class="bob">
+    <rect x="790" y="40" width="120" height="28" rx="9" fill="#0f1826" stroke="#2a3d5c"/>
+    <circle cx="806" cy="54" r="3.5" fill="#34d399"/>
+    <text x="858" y="58" class="mono" font-size="11" letter-spacing="1" text-anchor="middle" fill="#8ba3c0">API 200 OK</text>
+  </g>
+
+  <rect x="580" y="78" width="330" height="176" rx="14" fill="#0f1826" stroke="#24344f" stroke-width="1.5"/>
+  <path d="M580 110h330" stroke="#24344f" stroke-width="1.5"/>
+  <circle cx="598" cy="94" r="3.5" fill="#ff5f57"/>
+  <circle cx="611" cy="94" r="3.5" fill="#febc2e"/>
+  <circle cx="624" cy="94" r="3.5" fill="#28c840"/>
+  <path d="M644 90h96M644 98h64" stroke="#24344f" stroke-width="3" stroke-linecap="round"/>
+
+  <g fill="#22d3ee">
+    <rect x="618" y="190" width="24" height="46" rx="5" fill-opacity=".45"/>
+    <rect x="664" y="158" width="24" height="78" rx="5" fill-opacity=".60"/>
+    <rect x="710" y="174" width="24" height="62" rx="5" fill-opacity=".45"/>
+    <rect x="756" y="132" width="24" height="104" rx="5" fill-opacity=".75"/>
+    <rect x="802" y="150" width="24" height="86" rx="5" fill-opacity=".45"/>
+    <rect x="848" y="124" width="24" height="112" rx="5" fill="#34d399" fill-opacity=".85"/>
+  </g>
+  <path d="M618 176 664 146 710 160 756 120 802 134 848 112" fill="none" stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#fbbf24">
+    <circle cx="618" cy="176" r="3.5"/><circle cx="664" cy="146" r="3.5"/><circle cx="710" cy="160" r="3.5"/>
+    <circle cx="756" cy="120" r="3.5"/><circle cx="802" cy="134" r="3.5"/><circle cx="848" cy="112" r="3.5"/>
+  </g>
+  <text x="596" y="126" class="mono" font-size="10" letter-spacing="2" fill="#52657f">REVENUE / SEGMENTS</text>
+  <rect x="894" y="118" width="2" height="14" fill="#34d399" class="blink"/>
+
+  <!-- pipeline rail -->
+  <path class="flow" d="M632 272h98M756 272h96"/>
+  <g>
+    <rect x="608" y="260" width="24" height="24" rx="8" fill="#0f1826" stroke="#22d3ee"/>
+    <path d="M615 268h10M615 273h10M615 278h6" stroke="#22d3ee" stroke-width="1.8" stroke-linecap="round"/>
+    <rect x="730" y="260" width="24" height="24" rx="8" fill="#0f1826" stroke="#a78bfa"/>
+    <path d="m741 267-4 5 4 5M747 267l4 5-4 5" fill="none" stroke="#a78bfa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="852" y="260" width="24" height="24" rx="8" fill="#0f1826" stroke="#34d399"/>
+    <path d="M859 278v-11M865 278v-6M871 278v-8" stroke="#34d399" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <circle class="tr"  cx="620" cy="272" r="4" fill="#34d399"/>
+  <circle class="tr tr2" cx="620" cy="272" r="4" fill="#22d3ee"/>
+
+  </svg>

@@ -1,0 +1,35 @@
+name: Generate Contribution Snake
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: snake
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate snake
+        uses: Platane/snk@v3
+        with:
+          github_user_name: kamal003-gid
+          outputs: |
+            dist/github-contribution-grid-snake.svg?color_snake=%2334d399&color_dots=%2322d3ee,%23a78bfa,%23fbbf24,%2334d399,%230b1220
+
+      - name: Publish snake to gh-pages
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BUILD_DIR: dist

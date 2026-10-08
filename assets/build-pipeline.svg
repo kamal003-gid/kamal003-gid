@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="200" viewBox="0 0 1000 200" role="img" aria-labelledby="pipeTitle pipeDesc">
+  <title id="pipeTitle">The five-stage build loop</title>
+  <desc id="pipeDesc">Five stages on a dashed rail: Scope, Design, Build, Verify, Learn — from a blank repository to something real users can touch, then back to Scope.</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'Segoe UI', Inter, -apple-system, 'Trebuchet MS', Arial, sans-serif; }
+      .mono { font-family: 'Cascadia Code', Consolas, ui-monospace, 'Courier New', monospace; }
+      .rail { fill: none; stroke: #24344f; stroke-width: 2; }
+      .rail-live { fill: none; stroke: #34d399; stroke-width: 2; stroke-dasharray: 6 10; animation: dash 2.8s linear infinite; }
+      .node { fill: #101a2b; stroke: #24344f; stroke-width: 1.6; }
+      .dot { animation: hop 2.8s linear infinite; }
+      .d2 { animation-delay: -1.4s; }
+      .d3 { animation-delay: -2.1s; }
+      @keyframes dash { to { stroke-dashoffset: -64; } }
+      @keyframes hop { 0%, 100% { opacity: 0; } 12%, 88% { opacity: 1; } }
+      @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+    </style>
+  </defs>
+
+  <rect width="1000" height="200" rx="24" fill="#0b1220"/>
+  <rect x="1" y="1" width="998" height="198" rx="23" fill="none" stroke="#1e2d45" stroke-width="1.5"/>
+
+  <path class="rail" d="M120 76h760"/>
+  <path class="rail-live" d="M120 76h760"/>
+  <g fill="#34d399">
+    <circle class="dot" cx="120" cy="76" r="4"/>
+    <circle class="dot d2" cx="120" cy="76" r="4"/>
+    <circle class="dot d3" cx="120" cy="76" r="4"/>
+  </g>
+  <path d="M866 68l10 8-10 8" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M154 68l-10 8 10 8" fill="none" stroke="#24344f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- 01 SCOPE -->
+  <rect class="node" x="88" y="44" width="64" height="64" rx="18" stroke="#22d3ee"/>
+  <g fill="none" stroke="#22d3ee" stroke-width="2.2" stroke-linecap="round">
+    <circle cx="120" cy="76" r="16"/>
+    <circle cx="120" cy="76" r="8"/>
+  </g>
+  <circle cx="120" cy="76" r="3" fill="#22d3ee"/>
+
+  <!-- 02 DESIGN -->
+  <rect class="node" x="283" y="44" width="64" height="64" rx="18" stroke="#22d3ee"/>
+  <g fill="none" stroke="#22d3ee" stroke-width="2.2" stroke-linejoin="round">
+    <rect x="299" y="60" width="13" height="13" rx="3"/>
+    <rect x="318" y="60" width="13" height="13" rx="3"/>
+    <rect x="299" y="79" width="13" height="13" rx="3"/>
+    <rect x="318" y="79" width="13" height="13" rx="3"/>
+  </g>
+
+  <!-- 03 BUILD -->
+  <rect class="node" x="478" y="44" width="64" height="64" rx="18" stroke="#a78bfa"/>
+  <g fill="none" stroke="#a78bfa" stroke-width="2.2" stroke-linejoin="round">
+    <path d="M494 82h32M498 73h24M502 64h16"/>
+  </g>
+  <circle cx="510" cy="93" r="3.5" fill="#a78bfa"/>
+
+  <!-- 04 VERIFY -->
+  <rect class="node" x="673" y="44" width="64" height="64" rx="18" stroke="#34d399"/>
+  <g fill="none" stroke="#34d399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M705 60l13 6v11c0 11-13 16-13 16s-13-5-13-16V66Z"/>
+    <path d="m700 76 4 4 7-8"/>
+  </g>
+
+  <!-- 05 LEARN -->
+  <rect class="node" x="868" y="44" width="64" height="64" rx="18" stroke="#fbbf24"/>
+  <g fill="none" stroke="#fbbf24" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M885 88V72M898 88V64M911 88V76"/>
+    <path d="M885 66l8-8 6 5 10-12"/>
+    <path d="M904 51h5v5"/>
+  </g>
+
+  <g class="mono" font-size="12" letter-spacing="2" text-anchor="middle" fill="#e6edf6">
+    <text x="120" y="132">01 SCOPE</text>
+    <text x="315" y="132">02 DESIGN</text>
+    <text x="510" y="132">03 BUILD</text>
+    <text x="705" y="132">04 VERIFY</text>
+    <text x="900" y="132">05 LEARN</text>
+  </g>
+  <g font-size="11.5" text-anchor="middle" fill="#7f95b3">
+    <text x="120" y="152">what problem, for whom</text>
+    <text x="315" y="152">shape before code</text>
+    <text x="510" y="152">smallest working slice</text>
+    <text x="705" y="152">tests, edge cases, logs</text>
+    <text x="900" y="152">ship, observe, repeat</text>
+  </g>
+
+  <rect x="250" y="166" width="500" height="24" rx="12" fill="#101a2b" stroke="#1e2d45"/>
+  <text x="500" y="182" class="mono" font-size="10.5" letter-spacing="2" text-anchor="middle" fill="#8ba3c0">LEARN FEEDS BACK INTO SCOPE — THE LOOP IS THE WORK</text>
+</svg>
